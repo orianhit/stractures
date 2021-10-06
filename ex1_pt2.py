@@ -16,8 +16,8 @@ def isRedandent(A, n):
         if A[i] == '(':
             s.append(node(False))
         if A[i] in ['+', '-', '*', ':']:
-            if s:
-                t = s.pop() # only added code
+            if s: # only added code
+                t = s.pop()
                 t.isValid = True
                 s.append(t)
         if A[i] == ')':
